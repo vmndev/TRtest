@@ -1,0 +1,52 @@
+.searchBarWrapper {
+  margin: 5px 5px 15px;
+
+  input {
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+.resultsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0 5px 0;
+}
+
+.resultItem {
+  border: 1px solid;
+  padding: 15px;
+  margin: 0 2px 2px 0;
+  flex: 0 0 calc(100% / 3 - 4px);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: bisque;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .uidWrapper {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .resultItem {
+    flex: 0 0 calc(50% - 2px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .resultItem {
+    flex: 0 0 100%;
+  }
+}
