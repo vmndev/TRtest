@@ -20,7 +20,10 @@ export const Results = ({ results = [] }) => {
   }
 
   const handleResultClick = (e, { uid, label }, idx) => {
-    if (e.target.className.indexOf("uidWrapper") > -1) {
+    if (
+      e.target.className.indexOf("uidWrapper") > -1 ||
+      e.target.parentElement.className.indexOf("uidWrapper") > -1
+    ) {
       alert(uid);
       return;
     }
